@@ -13,6 +13,8 @@ From the original data, the script "run_analysis.R" modifies it through:
 * All the columns with names that contain "mean" are filtered from this combined data set together with the column activity and subject_ID.
 * Finally with the data set from 5) the mean over each column for every subject_ID and activity level is calculated and exported into the "second_tidy_set.txt" file.
 
+This "second_tidy_set.txt" contains of these columns:
+```str(second_tidy_set) ``` 
 
 
 | data.frame:  180 obs. of  55 variables: |  |
