@@ -5,13 +5,14 @@ This data is a tidy data version of the original data found on https://d396qusza
 The description of the original data is found in the "README.txt" file within the UCI HAR Dataset folder. 
 
 From the original data, the script "run_analysis.R" modifies it through:
-* Combining the files "train/X_train.txt"" and "test/X_test.txt" into one big file
-* The data from 1) is categorized into different activity levels using the files "train/y_train.txt" and "test/y_test.txt". This categorization is stored in a new colum called activity with levels 1 to 6 using integer numbers.
-* Columns from 1) are labeled using the data from the "features.txt" file
-* Activitation levels from 2) are labeled with the data from "activity_labels.txt" 
-* Using the data in files "train/subject_train.txt" and "test/subject_test.txt" the merged data is extended with one column that contains this information about the subject id for each row. This colum is called "subject_ID"
-* All the columns with names that contain "mean" are filtered from this combined data set together with the column activity and subject_ID.
-* Finally with the data set from 5) the mean over each column for every subject_ID and activity level is calculated and exported into the "second_tidy_set.txt" file.
+
+1. Combining the files "train/X_train.txt"" and "test/X_test.txt" into one big file
+2. The data from 1) is categorized into different activity levels using the files "train/y_train.txt" and "test/y_test.txt". This categorization is stored in a new colum called activity with levels 1 to 6 using integer numbers.
+3. Columns from 1) are labeled using the data from the "features.txt" file
+4. Activitation levels from 2) are labeled with the data from "activity_labels.txt" 
+5. Using the data in files "train/subject_train.txt" and "test/subject_test.txt" the merged data is extended with one column that contains this information about the subject id for each row. This colum is called "subject_ID"
+6. All the columns with names that contain "mean" are filtered from this combined data set together with the column activity and subject_ID.
+7. Finally with the data set from 5) the mean over each column for every subject_ID and activity level is calculated and exported into the "second_tidy_set.txt" file.
 
 This "second_tidy_set.txt" contains of these columns:
 ```str(second_tidy_set) ``` 
